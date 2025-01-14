@@ -33,3 +33,12 @@ Tas Travel Organizer DQLab
 Gantungan Kunci DQLab              
 Buku Planner Agenda DQLab          
 Sticky Notes DQLab 500 sheets      
+
+-- Mengapa Perlu Belajar SQL?
+Agar kita bisa menyimpan data dengan baik menggunakan database relasional.
+
+-- Tugas sebagai analyst
+Menganalisa data, mengambil, memodifikasi dan mengakses sendiri data tersebut dari database
+
+-- Dimana SQL Digunakan?
+Perusahaan – perusahaan yang sudah menerapkan sistem IT pasti memiliki sistem database dan bisa dipastikan menyimpan datanya dalam suatu database. Contohnya perusahaan berbasis teknologi, seperti e-commerce, menyimpan data baik itu data profile user, data transaksi pembelian dan penjualan, data produk dan data traffic kunjungan user ke halaman website di sistem database - atau lebih tepatnya sistem manajemen database atau database management system (DBMS).

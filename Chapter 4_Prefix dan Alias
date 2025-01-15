@@ -1,20 +1,207 @@
 SELECT t1.kode_produk AS product_code, t1.nama_produk AS product_name, t1.harga AS price FROM ms_produk AS t1;
+
+Prefix : menambahkan nama tabel di depan nama kolom.
+Alias : memberikan nama lain untuk tabel maupun kolom.
  
+-- Menggunakan Prefix pada Nama Kolom
+penulisan nama kolom yang lengkap perlu mencantumkan nama tabel di depan nama kolom tersebut
+tanda penyambung berupa tanda titik.
+jika hanya mengambil kolom dari satu tabel, prefix jarang digunakan karena sudah jelas dari tabel mana kolom itu berasal. 
+ketika mengambil data dari dua tabel misal dg JOIN & terdapat 2 kolom dengan nama yang sama, maka penggunaan prefix menjadi penting untuk menghindari error karena ambiguitas
 
-Beberapa detik aku termenung melihat syntax ini. Mengapa ada ‘t1’, dan ‘AS’? Apa maksudnya? Aku terdorong untuk bertanya kembali pada Senja.
+-- Mengambil nama kolom nama_produk data dari tabel ms_produk dengan penulisan prefix nama tabel
 
- 
+SELECT ms_produk.nama_produk FROM ms_produk;
++------------------------------------+
+| nama_produk                        |
++------------------------------------+
+| Kotak Pensil DQLab                 |
+| Flashdisk DQLab 64 GB              |
+| Gift Voucher DQLab 100rb           |
+| Flashdisk DQLab 32 GB              |
+| Gift Voucher DQLab 250rb           |
+| Pulpen Multifunction + Laser DQLab |
+| Tas Travel Organizer DQLab         |
+| Gantungan Kunci DQLab              |
+| Buku Planner Agenda DQLab          |
+| Sticky Notes DQLab 500 sheets      |
++------------------------------------+
 
-“Nja, sorry gangguin kamu lagi. Aku lagi mau nyoba latihan nih. Tapi aku nemu syntax ini dan agak bingung terutama karena ada ‘t1’, dan ‘AS’. Maksudnya?”
+Tugas:
+SELECT untuk menampilkan kolom kode_produk dari tabel ms_produk dengan penulisan menggunakan prefix nama tabel.
 
- 
+SELECT ms_produk.kode_produk FROM ms_produk;
++-------------+
+| kode_produk |
++-------------+
+| prod-01     |
+| prod-02     |
+| prod-03     |
+| prod-04     |
+| prod-05     |
+| prod-06     |
+| prod-07     |
+| prod-08     |
+| prod-09     |
+| prod-10     |
++-------------+
 
-“Oh, ini hanya variasi penggunaan nama table dan kolom pada bagian SELECT. Sini saya kasih tahu.”
+Quiz: Mana penggunaan prefix berikut yang benar?
+Mana saja perintah SELECT berikut dengan penggunaan prefix yang benar?
+JAWABAN : SELECT ms_produk.* FROM ms_produk;
 
- 
+-- Menggunakan Alias pada Kolom
+mengubah identitas nama kolom yang diambil dengan SELECT dengan menggunakan keyword AS
+Perubahan nama tabel bersifat temporary (hanya berubah ketika mengambil/meng-query data, nama kolom di tabel dalam database tidak akan berubah)
+alias tidak bisa digunakan untuk wildcard (*)
 
-Aku pun mencatat penjelasan Senja, walau sederhana tapi penting:
+Contoh :
+mengubah nama kolom dari kode_produk menjadi product_code dari table ms_produk.
 
-Prefix, dimana kita akan menambahkan nama tabel di depan nama kolom.
-Alias, dimana kita memberikan alias atau nama lain untuk tabel maupun kolom.
- 
+SELECT kode_produk AS product_code FROM ms_produk;
++--------------+
+| product_code |
++--------------+
+| prod-01      |
+| prod-02      |
+| prod-03      |
+| prod-04      |
+| prod-05      |
+| prod-06      |
+| prod-07      |
+| prod-08      |
+| prod-09      |
+| prod-10      |
++--------------+
+
+Tugas:
+SELECT untuk mengubah nama kolom dengan details :
+no_urut menjadi nomor.
+nama_produk menjadi nama.
+
+SELECT no_urut AS nomor, nama_produk AS nama FROM ms_produk;
++-------+------------------------------------+
+| nomor | nama                               |
++-------+------------------------------------+
+|     1 | Kotak Pensil DQLab                 |
+|     2 | Flashdisk DQLab 64 GB              |
+|     3 | Gift Voucher DQLab 100rb           |
+|     4 | Flashdisk DQLab 32 GB              |
+|     5 | Gift Voucher DQLab 250rb           |
+|     6 | Pulpen Multifunction + Laser DQLab |
+|     7 | Tas Travel Organizer DQLab         |
+|     8 | Gantungan Kunci DQLab              |
+|     9 | Buku Planner Agenda DQLab          |
+|    10 | Sticky Notes DQLab 500 sheets      |
++-------+------------------------------------+
+
+Quiz: Mana Penggunaan Alias yang Benar untuk Kolom?
+Mana penggunaan alias yang benar dari nama kode_produk menjadi kode dari table ms_produk?
+JAWABAN : SELECT kode_produk as kode FROM ms_produk;
+
+-- Menghilangkan Keyword 'AS'
+digunakan sebagai penanda alias 
+
+Contoh : 
+mengubah nama kolom dari kode_produk menjadi product_code dari tabel ms_produk & dilakukan tanpa menggunakan alias. 
+
+SELECT kode_produk product_code FROM ms_produk;
++--------------+
+| product_code |
++--------------+
+| prod-01      |
+| prod-02      |
+| prod-03      |
+| prod-04      |
+| prod-05      |
+| prod-06      |
+| prod-07      |
+| prod-08      |
+| prod-09      |
+| prod-10      |
++--------------+
+
+Tugas:
+Ubah nama kolom dari tabel ms_produk tanpa menggunakan Alias:
+no_urut menjadi nomor.
+nama_produk menjadi nama.
+
+SELECT no_urut nomor, nama_produk nama FROM ms_produk;
++-------+------------------------------------+
+| nomor | nama                               |
++-------+------------------------------------+
+|     1 | Kotak Pensil DQLab                 |
+|     2 | Flashdisk DQLab 64 GB              |
+|     3 | Gift Voucher DQLab 100rb           |
+|     4 | Flashdisk DQLab 32 GB              |
+|     5 | Gift Voucher DQLab 250rb           |
+|     6 | Pulpen Multifunction + Laser DQLab |
+|     7 | Tas Travel Organizer DQLab         |
+|     8 | Gantungan Kunci DQLab              |
+|     9 | Buku Planner Agenda DQLab          |
+|    10 | Sticky Notes DQLab 500 sheets      |
++-------+------------------------------------+
+
+Quiz: Mana Penggunaan Variasi Alias yang Benar?
+Mana penggunaan variasi alias yang benar untuk perintah SELECT berikut?
+JAWABAN : SELECT kode_produk as kode, nama_produk as nama FROM ms_produk;
+
+-- Menggabungkan Prefix dan Alias
+menerapkannya dengan tabel ms_produk, menggunakan prefix nama tabel dan alias untuk merubah nama_produk menjadi nama. 
+
+SELECT ms_produk.nama_produk AS nama FROM ms_produk;
++------------------------------------+
+| nama                               |
++------------------------------------+
+| Kotak Pensil DQLab                 |
+| Flashdisk DQLab 64 GB              |
+| Gift Voucher DQLab 100rb           |
+| Flashdisk DQLab 32 GB              |
+| Gift Voucher DQLab 250rb           |
+| Pulpen Multifunction + Laser DQLab |
+| Tas Travel Organizer DQLab         |
+| Gantungan Kunci DQLab              |
+| Buku Planner Agenda DQLab          |
+| Sticky Notes DQLab 500 sheets      |
++------------------------------------+
+
+Tugas:
+Tampilkan kolom harga dari tabel ms_produk dengan nama alias harga_jual lengkap dengan prefix.
+
+SELECT ms_produk.harga AS harga_jual FROM ms_produk;
++------------+
+| harga_jual |
++------------+
+|      62500 |
+|      55000 |
+|     100000 |
+|      40000 |
+|     250000 |
+|      92500 |
+|      48000 |
+|      15800 |
+|      92000 |
+|      55000 |
++------------+
+
+-- Menggunakan Alias pada Tabel
+Umumnya digunakan jika nama tabel tersebut cukup panjang dan muncul beberapa kali dalam query.
+
+Contoh :
+menggunakan alias pada tabel ms_produk menjadi t1.
+
+SELECT * FROM ms_produk AS t1;
++---------+-------------+------------------------------------+--------+
+| no_urut | kode_produk | nama_produk                        | harga  |
++---------+-------------+------------------------------------+--------+
+|       1 | prod-01     | Kotak Pensil DQLab                 |  62500 |
+|       2 | prod-02     | Flashdisk DQLab 64 GB              |  55000 |
+|       3 | prod-03     | Gift Voucher DQLab 100rb           | 100000 |
+|       4 | prod-04     | Flashdisk DQLab 32 GB              |  40000 |
+|       5 | prod-05     | Gift Voucher DQLab 250rb           | 250000 |
+|       6 | prod-06     | Pulpen Multifunction + Laser DQLab |  92500 |
+|       7 | prod-07     | Tas Travel Organizer DQLab         |  48000 |
+|       8 | prod-08     | Gantungan Kunci DQLab              |  15800 |
+|       9 | prod-09     | Buku Planner Agenda DQLab          |  92000 |
+|      10 | prod-10     | Sticky Notes DQLab 500 sheets      |  55000 |
++---------+-------------+------------------------------------+--------+

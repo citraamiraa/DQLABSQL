@@ -43,7 +43,7 @@ SELECT nama_produk FROM ms_produk;
 
 Quiz: Mana perintah SQL yang benar?
 Perintah berikut mana yang benar untuk mengambil kolom harga dari tabel ms_produk?
-JAWABAN : SELECT harga FROM ms_produk
+JAWABAN : SELECT harga FROM ms_produk;
 
 -- Mengambil Lebih dari Satu Kolom dari Tabel
 untuk mengambil kolom lainnya, perlu menuliskan tiap kolom yang ingin ditampilkan dipisahkan dengan tanda koma
@@ -88,7 +88,7 @@ SELECT nama_produk, harga FROM ms_produk;
 
 Quiz: Mana perintah SQL yang benar?
 mengambil kolom kode_produk dan harga dari table ms_produk?
-JAWABAN : SELECT kode_produk, harga FROM ms_produk
+JAWABAN : SELECT kode_produk, harga FROM ms_produk;
 
 -- Membatasi Pengambilan Jumlah Row Data
 membatasi jumlah baris data yang diambil menggunakan LIMIT
@@ -121,13 +121,13 @@ SELECT nama_produk, harga FROM ms_produk LIMIT 5;
 
 Quiz: Mana penggunaan limit berikut yang benar?
 Perintah berikut mana yang benar untuk mengambil data sejumlah 4 baris data untuk seluruh kolom?
-JAWABAN : SELECT * FROM ms_produk LIMIT 4
+JAWABAN : SELECT * FROM ms_produk LIMIT 4;
 
 -- Penggunaan SELECT DISTINCT statement
 Untuk menghilangkan data duplikasi
 data yang sama atau duplikat akan dieliminasi dan akan ditampilkan data yang unik saja.
 
-SELECT * FROM ms_pelanggan
+SELECT * FROM ms_pelanggan;
 +---------+----------------+---------------------+------------------------------------------+
 | no_urut | kode_pelanggan | nama_customer       | alamat                                   |
 +---------+----------------+---------------------+------------------------------------------+
@@ -150,7 +150,7 @@ SELECT * FROM ms_pelanggan
 Tugas:
 Tampilkan nama_customer dan alamat dari tabel ms_pelanggan dan hilangkan data duplikat.
 
-SELECT DISTINCT nama_customer, alamat FROM ms_pelanggan
+SELECT DISTINCT nama_customer, alamat FROM ms_pelanggan;
 +---------------------+------------------------------------------+
 | nama_customer       | alamat                                   |
 +---------------------+------------------------------------------+

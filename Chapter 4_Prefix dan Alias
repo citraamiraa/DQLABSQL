@@ -205,3 +205,85 @@ SELECT * FROM ms_produk AS t1;
 |       9 | prod-09     | Buku Planner Agenda DQLab          |  92000 |
 |      10 | prod-10     | Sticky Notes DQLab 500 sheets      |  55000 |
 +---------+-------------+------------------------------------+--------+
+
+Tugas:
+Ganti nama tabel ms_produk menjadi t2 dan tampilkan seluruh isinya tanpa menggunakan keyword AS.
+
+SELECT * FROM ms_produk t2;
++---------+-------------+------------------------------------+--------+
+| no_urut | kode_produk | nama_produk                        | harga  |
++---------+-------------+------------------------------------+--------+
+|       1 | prod-01     | Kotak Pensil DQLab                 |  62500 |
+|       2 | prod-02     | Flashdisk DQLab 64 GB              |  55000 |
+|       3 | prod-03     | Gift Voucher DQLab 100rb           | 100000 |
+|       4 | prod-04     | Flashdisk DQLab 32 GB              |  40000 |
+|       5 | prod-05     | Gift Voucher DQLab 250rb           | 250000 |
+|       6 | prod-06     | Pulpen Multifunction + Laser DQLab |  92500 |
+|       7 | prod-07     | Tas Travel Organizer DQLab         |  48000 |
+|       8 | prod-08     | Gantungan Kunci DQLab              |  15800 |
+|       9 | prod-09     | Buku Planner Agenda DQLab          |  92000 |
+|      10 | prod-10     | Sticky Notes DQLab 500 sheets      |  55000 |
++---------+-------------+------------------------------------+--------+
+
+-- Prefix dengan Alias Tabel
+Penggunaan nama original tabel sebagai prefix akan menimbulkan error saat query dijalankan
+dengan penggunaan alias, nama tabel secara temporary sudah di-gantikan oleh alias
+
+Contoh :
+menggunakan alias tabel : t1
+prefix untuk kolom : t1
+alias : nama kolom
+
+SELECT t1.kode_produk, t1.nama_produk FROM ms_produk AS t1
++-------------+------------------------------------+
+| kode_produk | nama_produk                        |
++-------------+------------------------------------+
+| prod-01     | Kotak Pensil DQLab                 |
+| prod-02     | Flashdisk DQLab 64 GB              |
+| prod-03     | Gift Voucher DQLab 100rb           |
+| prod-04     | Flashdisk DQLab 32 GB              |
+| prod-05     | Gift Voucher DQLab 250rb           |
+| prod-06     | Pulpen Multifunction + Laser DQLab |
+| prod-07     | Tas Travel Organizer DQLab         |
+| prod-08     | Gantungan Kunci DQLab              |
+| prod-09     | Buku Planner Agenda DQLab          |
+| prod-10     | Sticky Notes DQLab 500 sheets      |
++-------------+------------------------------------+
+
+SELECT t1.kode_produk AS product_code, t1.nama_produk AS product_name FROM ms_produk AS t1
++--------------+------------------------------------+
+| product_code | product_name                       |
++--------------+------------------------------------+
+| prod-01      | Kotak Pensil DQLab                 |
+| prod-02      | Flashdisk DQLab 64 GB              |
+| prod-03      | Gift Voucher DQLab 100rb           |
+| prod-04      | Flashdisk DQLab 32 GB              |
+| prod-05      | Gift Voucher DQLab 250rb           |
+| prod-06      | Pulpen Multifunction + Laser DQLab |
+| prod-07      | Tas Travel Organizer DQLab         |
+| prod-08      | Gantungan Kunci DQLab              |
+| prod-09      | Buku Planner Agenda DQLab          |
+| prod-10      | Sticky Notes DQLab 500 sheets      |
++--------------+------------------------------------+
+
+Tugas:
+Gantilah perintah pada code editor dengan nama alias t2
+tanpa menggunakan keyword AS untuk tabel ms_produk
+menampilkan kolom nama_produk dan harga, lengkap dengan prefix alias.
+
+SELECT t2.nama_produk, t2.harga FROM ms_produk t2
++------------------------------------+--------+
+| nama_produk                        | harga  |
++------------------------------------+--------+
+| Kotak Pensil DQLab                 |  62500 |
+| Flashdisk DQLab 64 GB              |  55000 |
+| Gift Voucher DQLab 100rb           | 100000 |
+| Flashdisk DQLab 32 GB              |  40000 |
+| Gift Voucher DQLab 250rb           | 250000 |
+| Pulpen Multifunction + Laser DQLab |  92500 |
+| Tas Travel Organizer DQLab         |  48000 |
+| Gantungan Kunci DQLab              |  15800 |
+| Buku Planner Agenda DQLab          |  92000 |
+| Sticky Notes DQLab 500 sheets      |  55000 |
++------------------------------------+--------+
+

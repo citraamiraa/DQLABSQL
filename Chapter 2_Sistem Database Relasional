@@ -1,1 +1,40 @@
+-- Apa itu RDBMS (Relational Database Management System)?
+program yang memungkinkan untuk Membuat, Memperbarui, dan Mengelola suatu basis data relasional (Relational Database). 
 
+-- Basis data relasional : 
+jenis database dimana data – data umumnya disimpan dalam bentuk yang terstruktur berupa tabel (baris dan kolom)
+setiap tabel/ data yang terdapat dalam database memiliki relasi (relational) satu sama lain. 
+
+-- Kelebihan :
+mudah dikelola terlebih jika memiliki banyak data atau informasi yang perlu disimpan & scalable 
+Setiap tabel/data dapat diupdate atau dimodifikasi tanpa mengganggu tabel/data yang lain.
+Flexible (jika perlu memperbarui data, hanya perlu melakukannya sekali saja & tidak perlu lagi mengubah banyak file satu per satu)
+mudah untuk di-extend (dapat dengan mudah memperbesar kapasitas dari database yang dimiliki)
+
+-- Produk-produk RDBMS 
+  MySQL
+  Open-source SQL database, untuk pengembangan aplikasi web.
+  PostgreSQL
+  Open-source RDBMS product, untuk pengembangan aplikasi web. Akan tetapi secara kinerja, postgreSQL lebih lambat dibandingkan MySQL.
+  Oracle DB
+  bersifat proprietary atau tidak open source & umumnya digunakan di industri perbankan.
+  Microsoft SQL Server 
+  bersifat proprietary atau tidak open source, digunakan di perusahaan skala besar yang juga menggunakan produk keluaran Microsoft lainnya.
+  SQLite
+  Open source RDBMS, digunakan sebagai database di handphone, MP3 player, and perangkat lainnya.
+  Lainnya
+  MariaDB yang juga gratis atau open source, IBM DB2, Microsoft Access
+
+-- Struktur Penyimpanan RDBMS
+Sebagai penyimpan data, RDBMS memiliki struktur hirarki 
+1. Database
+2. Tabel (table)
+3. Kolom (column) atau Field
+
+-- Contoh
+nama tabel : ms_produk
+Kolom : no_urut
+        kode_produk
+        nama_produk
+        harga
+Row : baris kelima adalah "Gift Voucher DQLab 250rb"

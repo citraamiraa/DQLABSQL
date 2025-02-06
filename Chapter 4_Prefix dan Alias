@@ -287,3 +287,13 @@ SELECT t2.nama_produk, t2.harga FROM ms_produk t2
 | Sticky Notes DQLab 500 sheets      |  55000 |
 +------------------------------------+--------+
 
+Quiz: Mana Kombinasi Prefix dan Alias yang Benar?
+Mana saja perintah berikut yang merupakan kombinasi prefix dan alias yang benar?
+JAWABAN : SELECT a1.kode_produk kode, a1.nama_produk AS nama FROM ms_produk a1
+
+Summary :
+SELECT dapat ditulis dengan variasi identitas kolom dan tabel berupa prefix dan alias.
+Penulisan lengkap untuk nama kolom adalah prefix berupa nama tabel disertai tanda titik sebelum nama kolom itu sendiri.
+Alias adalah nama lain yang diberikan untuk kolom maupun tabel.
+Alias dapat digunakan dengan keyword AS atau tanpa keyword AS setelah nama kolom dan tabel.
+Prefix nama tabel bisa menggunakan alias.

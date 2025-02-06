@@ -1,4 +1,11 @@
-Klausul WHERE untuk:
+--- Fungsi Klausul WHERE :
 Filter data dengan kondisi teks tertentu.
 Filter data dengan nilai angka tertentu.
 Filter data dengan dua kondisi menggunakan operator AND dan OR.
+
+--- Menggunakan WHERE
+Klausul WHERE dari SELECT digunakan untuk memfilter data berdasarkan kondisi tertentu. 
+
+SELECT nama_kolom FROM nama_tabel WHERE kondisi;
+
+SELECT * FROM ms_produk WHERE nama_produk = 'Gantungan Kunci DQLab';

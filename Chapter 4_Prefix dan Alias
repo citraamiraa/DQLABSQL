@@ -97,6 +97,7 @@ SELECT no_urut AS nomor, nama_produk AS nama FROM ms_produk;
 
 Quiz: Mana Penggunaan Alias yang Benar untuk Kolom?
 Mana penggunaan alias yang benar dari nama kode_produk menjadi kode dari table ms_produk?
+
 JAWABAN : SELECT kode_produk as kode FROM ms_produk;
 
 -- Menghilangkan Keyword 'AS'

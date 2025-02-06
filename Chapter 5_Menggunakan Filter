@@ -8,4 +8,10 @@ Klausul WHERE dari SELECT digunakan untuk memfilter data berdasarkan kondisi ter
 
 SELECT nama_kolom FROM nama_tabel WHERE kondisi;
 
+Contoh :
 SELECT * FROM ms_produk WHERE nama_produk = 'Gantungan Kunci DQLab';
++---------+-------------+-----------------------+-------+
+| no_urut | kode_produk | nama_produk           | harga |
++---------+-------------+-----------------------+-------+
+|       8 | prod-08     | Gantungan Kunci DQLab | 15800 |
++---------+-------------+-----------------------+-------+

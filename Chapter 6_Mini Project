@@ -6,3 +6,42 @@ Diurutkan mulai dari total revenue terbesar
 Meng-query data dari tabel tr_penjualan yang terdapat di database
 Melakukan perkalian antara kolom qty dan harga untuk memperoleh total revenue setiap kode pelanggan yang dinyatakan ke dalam kolom total
 Menggunakan “ORDER BY total DESC pada akhir query untuk mengurutkan data.
+
+JAWABAN :
+SELECT 
+    kode_pelanggan, 
+    nama_produk, 
+    qty, 
+    harga, 
+    (qty * harga) AS total 
+FROM tr_penjualan 
+HAVING total >= 100000  --- Menggunakan HAVING karena ada aggregation
+ORDER BY total DESC;
+
++----------------+-------------------------------+------+--------+---------+
+| kode_pelanggan | nama_produk                   | qty  | harga  | total   |
++----------------+-------------------------------+------+--------+---------+
+| dqlabcust02    | Gift Voucher DQLab 250rb      |    4 | 250000 | 1000000 |
+| dqlabcust07    | Kotak Pensil DQLab            |    5 |  62500 |  312500 |
+| dqlabcust07    | Buku Planner Agenda DQLab     |    3 |  92000 |  276000 |
+| dqlabcust05    | Buku Planner Agenda DQLab     |    3 |  92000 |  276000 |
+| dqlabcust03    | Sticky Notes DQLab 500 sheets |    5 |  55000 |  275000 |
+| dqlabcust01    | Sticky Notes DQLab 500 sheets |    4 |  55000 |  220000 |
+| dqlabcust01    | Gift Voucher DQLab 100rb      |    2 | 100000 |  200000 |
+| dqlabcust03    | Flashdisk DQLab 32 GB         |    4 |  40000 |  160000 |
+| dqlabcust07    | Flashdisk DQLab 32 GB         |    3 |  40000 |  120000 |
+| dqlabcust03    | Flashdisk DQLab 64 GB         |    2 |  55000 |  110000 |
+| dqlabcust07    | Flash disk DQLab 32 GB        |    1 | 100000 |  100000 |
++----------------+-------------------------------+------+--------+---------+
+
+Summary of Fundemental SQL using SELECT Statement
+
+Konsep SQL, yaitu:
+Konsep Sistem Database Relasional atau Relational Database Management System (RDBMS).
+Struktur penyimpanan RDBMS yang terdiri dari database, tabel, kolom (column) dan baris (row).
+Pengenalan perintah SELECT untuk mengambil data dari tabel.
+Teknik SELECT, dimana aku dapat:
+Mengambil kolom tertentu.
+Mengambil jumlah data tertentu.
+Menggunakan prefix dan alias.
+Menggunakan filter.

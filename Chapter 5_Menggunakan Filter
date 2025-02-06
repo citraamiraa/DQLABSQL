@@ -109,3 +109,15 @@ Mana Query Filter dengan OR yang Benar?
 
 JAWABAN :
 SELECT * FROM ms_produk WHERE nama_produk = 'Gantungan Kunci DQLab' OR harga < 50000;
+
+Quiz: 
+Manakah perintah SELECT dengan filter yang akan mengeluarkan hasil?
+
+JAWABAN : 
+SELECT * FROM ms_produk WHERE harga > 50000 OR harga < 50000;
+
+Summary :
+Filter di SQL diimplementasikan dengan menggunakan WHERE diikuti dengan satu atau lebih kondisi logis.
+Kondisi logis ini memiliki format nama kolom diikuti dengan nilai yang akan difilter. 
+Untuk teks sederhana menggunakan tanda sama dengan, untuk angka menggunakan operator perbandingan matematika.
+Operand OR dan AND untuk menggabungkan beberapa kondisi menjadi satu kondisi baru yang harus terpenuhi untuk pengambilan data.

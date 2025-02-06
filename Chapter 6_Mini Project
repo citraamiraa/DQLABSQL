@@ -1,0 +1,8 @@
+--- Proyek dari Cabang A
+Menyiapkan data transaksi penjualan dengan total revenue >= IDR 100.000
+Format data yang akan ditampilkan : kode_pelanggan, nama_produk, qty, harga, dan total
+Diurutkan mulai dari total revenue terbesar
+
+Meng-query data dari tabel tr_penjualan yang terdapat di database
+Melakukan perkalian antara kolom qty dan harga untuk memperoleh total revenue setiap kode pelanggan yang dinyatakan ke dalam kolom total
+Menggunakan “ORDER BY total DESC pada akhir query untuk mengurutkan data.

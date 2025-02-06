@@ -24,3 +24,88 @@ SELECT * FROM ms_produk WHERE nama_produk = 'Tas Travel Organizer DQLab';
 +---------+-------------+----------------------------+-------+
 |       7 | prod-07     | Tas Travel Organizer DQLab | 48000 |
 +---------+-------------+----------------------------+-------+
+
+--- Menggunakan Operand OR
+Untuk mengeluarkan dua data sekaligus
+
+SELECT nama_kolom FROM nama_tabel WHERE kondisi1 OR kondisi2;
+
+SELECT * FROM ms_produk WHERE nama_produk = 'Gantungan Kunci DQLab' OR nama_produk = 'Tas Travel Organizer DQLab';
++---------+-------------+----------------------------+-------+
+| no_urut | kode_produk | nama_produk                | harga |
++---------+-------------+----------------------------+-------+
+|       7 | prod-07     | Tas Travel Organizer DQLab | 48000 |
+|       8 | prod-08     | Gantungan Kunci DQLab      | 15800 |
++---------+-------------+----------------------------+-------+
+
+Tugas:
+Tambahkan nama_produk 'Flashdisk DQLab 64 GB' ke dalam tabel
+
+SELECT * FROM ms_produk 
+WHERE nama_produk = 'Gantungan Kunci DQLab' OR nama_produk = 'Tas Travel Organizer DQLab' OR nama_produk = 'Flashdisk DQLab 64 GB';
++---------+-------------+----------------------------+-------+
+| no_urut | kode_produk | nama_produk                | harga |
++---------+-------------+----------------------------+-------+
+|       2 | prod-02     | Flashdisk DQLab 64 GB      | 55000 |
+|       7 | prod-07     | Tas Travel Organizer DQLab | 48000 |
+|       8 | prod-08     | Gantungan Kunci DQLab      | 15800 |
++---------+-------------+----------------------------+-------+
+
+--- Filter untuk Angka
+Melakukan filtering untuk angka.
+
+Contoh : 
+filter dimana kolom harga harus memiliki nilai di bawah 50000.
+
+SELECT * FROM ms_produk WHERE harga < 50000;
++---------+-------------+----------------------------+-------+
+| no_urut | kode_produk | nama_produk                | harga |
++---------+-------------+----------------------------+-------+
+|       4 | prod-04     | Flashdisk DQLab 32 GB      | 40000 |
+|       7 | prod-07     | Tas Travel Organizer DQLab | 48000 |
+|       8 | prod-08     | Gantungan Kunci DQLab      | 15800 |
++---------+-------------+----------------------------+-------+
+
+Tugas:
+Tampilkan informasi dengan harga diatas 50000
+
+SELECT * FROM ms_produk WHERE harga > 50000;
++---------+-------------+------------------------------------+--------+
+| no_urut | kode_produk | nama_produk                        | harga  |
++---------+-------------+------------------------------------+--------+
+|       1 | prod-01     | Kotak Pensil DQLab                 |  62500 |
+|       2 | prod-02     | Flashdisk DQLab 64 GB              |  55000 |
+|       3 | prod-03     | Gift Voucher DQLab 100rb           | 100000 |
+|       5 | prod-05     | Gift Voucher DQLab 250rb           | 250000 |
+|       6 | prod-06     | Pulpen Multifunction + Laser DQLab |  92500 |
+|       9 | prod-09     | Buku Planner Agenda DQLab          |  92000 |
+|      10 | prod-10     | Sticky Notes DQLab 500 sheets      |  55000 |
++---------+-------------+------------------------------------+--------+
+
+--- Menggunakan Operand AND
+Agar dua atau lebih kondisi terpenuhi semuanya. 
+Jika salah satu kondisi tidak terpenuhi, data tidak akan diambil.
+
+SELECT nama_kolom FROM nama_tabel WHERE kondisi1 AND kondisi2;
+
+Contoh :
+SELECT * FROM ms_produk WHERE nama_produk = 'Gantungan Kunci DQLab' AND harga > 50000;
+
+Tidak ada nama_produk yang mengandung “Gantungan Kunci DQLab” dan dengan harga di atas 50,000.
+Tidak ada hasil yang keluar karena kedua kondisi tersebut tidak terpenuhi.
+
+Tugas:
+Ganti kondisi contoh di atas dimana harga menjadi lebih kecil dari 50000, dengan nama_produk yang sama.
+
+SELECT * FROM ms_produk WHERE nama_produk = 'Gantungan Kunci DQLab' AND harga < 50000;
++---------+-------------+-----------------------+-------+
+| no_urut | kode_produk | nama_produk           | harga |
++---------+-------------+-----------------------+-------+
+|       8 | prod-08     | Gantungan Kunci DQLab | 15800 |
++---------+-------------+-----------------------+-------+
+
+Quiz: 
+Mana Query Filter dengan OR yang Benar?
+
+JAWABAN :
+SELECT * FROM ms_produk WHERE nama_produk = 'Gantungan Kunci DQLab' OR harga < 50000;
